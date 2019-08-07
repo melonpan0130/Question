@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- jstl 코어 태그 -->
+
+
+
+<!--  context 경로 -->
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<style>
+		body {
+			margin-top: 70px;
+		}
+	</style>
+</head>
+<title>Question</title>
+<script>
+	$(document).ready(function() {
+		$("#btnWrite").click(function() {
+			location.href="/project/board/write.do";
+		});
+	});
+	
+	function list(page) {
+		location.href="/project/board/list.do?curPage="+page+"&searchOption=&keyword=";
+	}
+</script>
+<link rel="stylesheet" type="text/css" href="../resources/css/list.css" />
+</head>
+<body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Song+Myung&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/project/resources/css/menu.css" />
+</head>
+<body>
+
+<div id="menu" style="text-align : center;" >
+	<div>
+		<h1 id="logo">Q</h1>
+		<form action="" name="search" id="search">
+			<select name="searchOption" class="search">
+				<option value="all"  >제목+이름+내용</option>
+				<option value="writer"  >이름</option>
+				<option value="content"  >내용</option>
+				<option value="title" selected >제목</option>
+			</select>
+			<input name="keyword" value="" class="search">
+			<button name="submit" class="search"></button>
+		</form>
+		
+			
+			
+				<a href="/project/login/logout.do">Sign Out</a>
+				<a href="/project/board/list.do">Question</a>
+				<a href="/project/member/list.do">
+					<div id="menu_user">
+						<img src="/project/resources/img/cat.PNG" />
+						<span>eunju</span>
+					</div>
+				</a>
+			
+		
+		<!-- <a href="/project">MAIN</a> -->
+	</div>
+</div>
+</body>
+</html>
+
+<div id="content">
+<!-- <table border="1" width="700px">
+	<tr>
+		<th>제목</th>
+		<th>작성자</th>
+		<th>내용</th>
+		<th>작성일</th>
+		<th>조회수</th>
+	</tr>
+
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=71
+			&curPage=1
+			&searchOption=title
+			&keyword=">???</a>
+			
+		</td>
+		<td>eunju</td>
+		<td>sd</td>
+		<td>Fri Aug 02 13:09:40 KST 2019</td>
+		<td>0</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=70
+			&curPage=1
+			&searchOption=title
+			&keyword=">??</a>
+			
+		</td>
+		<td>hello</td>
+		<td>?????</td>
+		<td>Fri Aug 02 10:37:39 KST 2019</td>
+		<td>1</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=70
+			&curPage=1
+			&searchOption=title
+			&keyword=">??</a>
+			
+		</td>
+		<td>eunju</td>
+		<td>?????</td>
+		<td>Fri Aug 02 10:37:39 KST 2019</td>
+		<td>1</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=69
+			&curPage=1
+			&searchOption=title
+			&keyword=">??</a>
+			
+		</td>
+		<td>hello</td>
+		<td>?????</td>
+		<td>Fri Aug 02 10:34:58 KST 2019</td>
+		<td>0</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=69
+			&curPage=1
+			&searchOption=title
+			&keyword=">??</a>
+			
+		</td>
+		<td>eunju</td>
+		<td>?????</td>
+		<td>Fri Aug 02 10:34:58 KST 2019</td>
+		<td>0</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=68
+			&curPage=1
+			&searchOption=title
+			&keyword=">?????</a>
+			
+		</td>
+		<td>hello</td>
+		<td>??~~</td>
+		<td>Fri Aug 02 09:34:33 KST 2019</td>
+		<td>0</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=68
+			&curPage=1
+			&searchOption=title
+			&keyword=">?????</a>
+			
+		</td>
+		<td>eunju</td>
+		<td>??~~</td>
+		<td>Fri Aug 02 09:34:33 KST 2019</td>
+		<td>0</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=67
+			&curPage=1
+			&searchOption=title
+			&keyword=">Hello</a>
+			
+		</td>
+		<td>eunju</td>
+		<td>hello!</td>
+		<td>Thu Aug 01 19:09:37 KST 2019</td>
+		<td>1</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=67
+			&curPage=1
+			&searchOption=title
+			&keyword=">Hello</a>
+			
+		</td>
+		<td>hello</td>
+		<td>hello!</td>
+		<td>Thu Aug 01 19:09:37 KST 2019</td>
+		<td>1</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=66
+			&curPage=1
+			&searchOption=title
+			&keyword=">Cake</a>
+			
+		</td>
+		<td>hello</td>
+		<td>??????</td>
+		<td>Thu Aug 01 19:06:29 KST 2019</td>
+		<td>0</td>
+	<tr>
+	
+	
+	<tr>
+		<td colspan="5">
+			
+			
+			
+				
+					
+						<span style="color:red">1</span>
+					
+					
+				
+			
+				
+					
+					
+						<a href="javascript:list('2')">2</a>&nbsp;
+					
+				
+			
+				
+					
+					
+						<a href="javascript:list('3')">3</a>&nbsp;
+					
+				
+			
+				
+					
+					
+						<a href="javascript:list('4')">4</a>&nbsp;
+					
+				
+			
+				
+					
+					
+						<a href="javascript:list('5')">5</a>&nbsp;
+					
+				
+			
+				
+					
+					
+						<a href="javascript:list('6')">6</a>&nbsp;
+					
+				
+			
+			
+			
+			
+				<a href="javascript:list('6')">[끝]</a>
+			
+		</td>
+	</tr>
+</table> -->
+
+	
+		
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../resources/css/write.css" />
+<script>
+	$(document).ready(function() {
+		$("#btnSave").click(function() {
+			var title = $("#insertBoard input[name='title']");
+			var content = $("#insertBoard textarea[name='content']");
+			console.log(title);
+			console.log(content);
+			
+			if(title.val() == "")
+			{
+				alert('제목을 입력하세요');
+				title.focus();
+				
+				return;
+			}
+			else if(content.val() == "")
+			{
+				alert('내용을 입력하세요');
+				content.focus();
+				return;
+			}
+			
+			document.getElementById("insertBoard").submit();
+		});
+	})
+</script>
+</head>
+<body>
+
+<div class="board" class="trigger">
+	<div class="user">
+		<img src="../resources/img/cat.PNG" />
+		<span>eunju</span>
+		<span></span>
+	</div>
+	<p style="font-size: 20px" class="trigger">eunju님, 오늘은 어떤 하루를 보냈나요?</p>
+</div>
+
+<div class="popup">
+	<form id="insertBoard" class="popupItem" method="post" action="/project/board/insert.do">
+		<div class="board">
+			<span class="close-button">&times;</span>
+			<div class="user">
+				<img src="../resources/img/cat.PNG" />
+				<span>eunju</span>
+				<span></span>
+			</div>
+			<input name="title" id="insertTitle" placeholder="제목을 작성해 주세요.">
+			<textarea name="content" id="insertContent" placeholder="내용을 작성해 주세요."></textarea>
+			<input type="button" id="btnSave" value="게시">
+		</div>
+	</form>
+</div>
+<script type="text/javascript"> 
+	var modal = document.querySelector(".popup"); 
+	var trigger = document.querySelector(".trigger"); 
+	var closeButton = document.querySelector(".close-button");
+
+   function toggleModal() { 
+		modal.classList.toggle("popupShow"); 
+	}
+
+   function windowOnClick(event) { 
+		if (event.target === modal) { 
+			toggleModal(); 
+		} 
+	}
+
+	function c() {
+		console.log('clicked');
+	}
+
+	trigger.addEventListener("click", toggleModal); 
+	closeButton.addEventListener("click", toggleModal);
+	window.addEventListener("click", windowOnClick); 
+</script>
+
+</body>
+</html>
+	
+	
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=71
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>eunju</span>
+					<span>Fri Aug 02 13:09:40 KST 2019</span>	
+				</div>
+				<h2>???</h2>
+				<p>sd</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 0회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=70
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>hello</span>
+					<span>Fri Aug 02 10:37:39 KST 2019</span>	
+				</div>
+				<h2>??</h2>
+				<p>?????</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 1회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=70
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>eunju</span>
+					<span>Fri Aug 02 10:37:39 KST 2019</span>	
+				</div>
+				<h2>??</h2>
+				<p>?????</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 1회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=69
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>hello</span>
+					<span>Fri Aug 02 10:34:58 KST 2019</span>	
+				</div>
+				<h2>??</h2>
+				<p>?????</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 0회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=69
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>eunju</span>
+					<span>Fri Aug 02 10:34:58 KST 2019</span>	
+				</div>
+				<h2>??</h2>
+				<p>?????</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 0회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=68
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>hello</span>
+					<span>Fri Aug 02 09:34:33 KST 2019</span>	
+				</div>
+				<h2>?????</h2>
+				<p>??~~</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 0회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=68
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>eunju</span>
+					<span>Fri Aug 02 09:34:33 KST 2019</span>	
+				</div>
+				<h2>?????</h2>
+				<p>??~~</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 0회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=67
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>eunju</span>
+					<span>Thu Aug 01 19:09:37 KST 2019</span>	
+				</div>
+				<h2>Hello</h2>
+				<p>hello!</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 1회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=67
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>hello</span>
+					<span>Thu Aug 01 19:09:37 KST 2019</span>	
+				</div>
+				<h2>Hello</h2>
+				<p>hello!</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 1회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=66
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>hello</span>
+					<span>Thu Aug 01 19:06:29 KST 2019</span>	
+				</div>
+				<h2>Cake</h2>
+				<p>??????</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 0회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- jstl 코어 태그 -->
+
+
+
+<!--  context 경로 -->
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<title>Question</title>
+<script>
+	$(document).ready(function() {
+		$("#btnWrite").click(function() {
+			location.href="/project/board/write.do";
+		});
+	});
+	
+	function list(page) {
+		location.href="/project/board/list.do?curPage="+page+"&searchOption=&keyword=";
+	}
+</script>
+<link rel="stylesheet" type="text/css" href="../resources/css/list.css" />
+</head>
+<body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Song+Myung&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/project/resources/css/menu.css" />
+</head>
+<body>
+
+<div id="menu" style="text-align : center;" >
+	<div>
+		<h1 id="logo">Q</h1>
+		<a href="/project/member/list.do">회원 목록</a>
+		<a href="/project/board/list.do">게시판 목록</a>
+		<a href="/project">메인으로</a>
+		
+			
+			
+				<a href="/project/login/logout.do">로그 아웃</a>
+				<div id="menu_user">
+					<img src="../resources/img/cat.PNG" />
+					<span>eunju</span>
+				</div>
+			
+		
+
+<form action="" name="search">
+	<select name="searchOption">
+		<option value="all"  >제목+이름+내용</option>
+		<option value="writer"  >이름</option>
+		<option value="content"  >내용</option>
+		<option value="title" selected >제목</option>
+	</select>
+	<input name="keyword" value="">
+	<button name="submit">조회</button>
+</form>
+
+		
+	</div>
+</div>
+</body>
+</html>
+
+
+	<input type="button" value="글쓰기" id="btnWrite">
+
+
+<div id="content">
+<table border="1" width="700px">
+	<tr>
+		<th>제목</th>
+		<th>작성자</th>
+		<th>내용</th>
+		<th>작성일</th>
+		<th>조회수</th>
+	</tr>
+
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=42
+			&curPage=1
+			&searchOption=title
+			&keyword=">dddddddd</a>
+			
+		</td>
+		<td>hello</td>
+		<td>dddddddddddddd</td>
+		<td>Wed Jul 31 15:42:33 KST 2019</td>
+		<td>2</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=41
+			&curPage=1
+			&searchOption=title
+			&keyword=">sdf</a>
+			
+		</td>
+		<td>hello</td>
+		<td>sdf</td>
+		<td>Wed Jul 31 15:42:23 KST 2019</td>
+		<td>2</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=41
+			&curPage=1
+			&searchOption=title
+			&keyword=">sdf</a>
+			
+		</td>
+		<td>eunju</td>
+		<td>sdf</td>
+		<td>Wed Jul 31 15:42:23 KST 2019</td>
+		<td>2</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=40
+			&curPage=1
+			&searchOption=title
+			&keyword=">ssss</a>
+			
+		</td>
+		<td>eunju</td>
+		<td>sssss</td>
+		<td>Wed Jul 31 15:30:49 KST 2019</td>
+		<td>1</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=40
+			&curPage=1
+			&searchOption=title
+			&keyword=">ssss</a>
+			
+		</td>
+		<td>hello</td>
+		<td>sssss</td>
+		<td>Wed Jul 31 15:30:49 KST 2019</td>
+		<td>1</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=39
+			&curPage=1
+			&searchOption=title
+			&keyword=">sdddddddddd</a>
+			
+		</td>
+		<td>hello</td>
+		<td>ddddd</td>
+		<td>Wed Jul 31 15:30:45 KST 2019</td>
+		<td>0</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=39
+			&curPage=1
+			&searchOption=title
+			&keyword=">sdddddddddd</a>
+			
+		</td>
+		<td>eunju</td>
+		<td>ddddd</td>
+		<td>Wed Jul 31 15:30:45 KST 2019</td>
+		<td>0</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=38
+			&curPage=1
+			&searchOption=title
+			&keyword=">sdfsd</a>
+			
+		</td>
+		<td>hello</td>
+		<td>sdfd</td>
+		<td>Wed Jul 31 15:30:40 KST 2019</td>
+		<td>0</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=38
+			&curPage=1
+			&searchOption=title
+			&keyword=">sdfsd</a>
+			
+		</td>
+		<td>eunju</td>
+		<td>sdfd</td>
+		<td>Wed Jul 31 15:30:40 KST 2019</td>
+		<td>0</td>
+	<tr>
+	
+	<tr>
+		<td><a href="/project/board/view.do?bno=37
+			&curPage=1
+			&searchOption=title
+			&keyword=">a</a>
+			
+		</td>
+		<td>hello</td>
+		<td>a</td>
+		<td>Wed Jul 31 15:30:35 KST 2019</td>
+		<td>0</td>
+	<tr>
+	
+	
+	<tr>
+		<td colspan="5">
+			
+			
+			
+				
+					
+						<span style="color:red">1</span>
+					
+					
+				
+			
+				
+					
+					
+						<a href="javascript:list('2')">2</a>&nbsp;
+					
+				
+			
+				
+					
+					
+						<a href="javascript:list('3')">3</a>&nbsp;
+					
+				
+			
+			
+			
+			
+				<a href="javascript:list('3')">[끝]</a>
+			
+		</td>
+	</tr>
+</table>
+
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=42
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>hello</span>
+					<span>Wed Jul 31 15:42:33 KST 2019</span>	
+				</div>
+				<h2>dddddddd</h2>
+				<p>dddddddddddddd</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 2회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=41
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>hello</span>
+					<span>Wed Jul 31 15:42:23 KST 2019</span>	
+				</div>
+				<h2>sdf</h2>
+				<p>sdf</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 2회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=41
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>eunju</span>
+					<span>Wed Jul 31 15:42:23 KST 2019</span>	
+				</div>
+				<h2>sdf</h2>
+				<p>sdf</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 2회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=40
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>eunju</span>
+					<span>Wed Jul 31 15:30:49 KST 2019</span>	
+				</div>
+				<h2>ssss</h2>
+				<p>sssss</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 1회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=40
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>hello</span>
+					<span>Wed Jul 31 15:30:49 KST 2019</span>	
+				</div>
+				<h2>ssss</h2>
+				<p>sssss</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 1회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=39
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>hello</span>
+					<span>Wed Jul 31 15:30:45 KST 2019</span>	
+				</div>
+				<h2>sdddddddddd</h2>
+				<p>ddddd</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 0회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=39
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>eunju</span>
+					<span>Wed Jul 31 15:30:45 KST 2019</span>	
+				</div>
+				<h2>sdddddddddd</h2>
+				<p>ddddd</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 0회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=38
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>hello</span>
+					<span>Wed Jul 31 15:30:40 KST 2019</span>	
+				</div>
+				<h2>sdfsd</h2>
+				<p>sdfd</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 0회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=38
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>eunju</span>
+					<span>Wed Jul 31 15:30:40 KST 2019</span>	
+				</div>
+				<h2>sdfsd</h2>
+				<p>sdfd</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 0회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+		<div class="board">
+			<a href="/project/board/view.do?bno=37
+			&curPage=1
+			&searchOption=title
+			&keyword=">
+				<div class="user">
+					<img src="../resources/img/cat.PNG" />
+					<span>hello</span>
+					<span>Wed Jul 31 15:30:35 KST 2019</span>	
+				</div>
+				<h2>a</h2>
+				<p>a</p>
+				<div class="foot">
+					<span><img src="../resources/img/flag.png">조회수 0회</span>
+					<span>댓글 0개</span>
+				</div>
+			</a>
+		</div>
+	
+</div>
+</body>
+</html>

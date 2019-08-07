@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<link rel="stylesheet" href="../resources/css/login.css" />
+<script>
+	$(document).ready(function() {
+		$("#btnLogin").click(function() {
+			var userId = $("#userId").val();
+			var userPw = $("#userPw").val();
+			
+			if(userId == "")
+			{
+				alert("아이디를 입력하세요.");
+				$("#userId").focus();
+				return;
+			}
+			else if (userPw == "")
+			{
+				alert("비밀번호를 입력하세요.");
+				$("#userPw").focus();
+				return;
+			}
+			document.form1.submit();
+		})
+	})
+</script>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Song+Myung&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/project/resources/css/menu.css" />
+</head>
+<body>
+
+<div id="menu" style="text-align : center;" >
+	<div>
+		<h1 id="logo">Q</h1>
+		<form action="" name="search" id="search">
+			<select name="searchOption" class="search">
+				<option value="all"  >제목+이름+내용</option>
+				<option value="writer"  >이름</option>
+				<option value="content"  >내용</option>
+				<option value="title"  >제목</option>
+			</select>
+			<input name="keyword" value="" class="search">
+			<button name="submit" class="search"></button>
+		</form>
+		
+			
+				<a href="/project/login/login.do">Sign In</a>
+			
+			
+		
+		
+		<a href="/project/board/list.do">Question</a>
+		<a href="/project">MAIN</a>
+		
+	</div>
+</div>
+</body>
+</html>
+<form id="loginForm" name="form1" action="/project/login/loginCheck.do">
+	<h1>Sign In</h1>
+	<table>
+		<tr>
+			<td><label for="userId">ID</label></td>
+			<td><input name="userId" id="userId"></td>
+		</tr>
+		<tr>
+			<td><label for="userPw">PW</label></td>
+			<td><input type="password" name="userPw" id="userPw"></td>
+		</tr>
+	</table>
+	<a id="btnLogin">Sign In</a>
+	<div style="color:red">로그아웃 되었습니다.</div>
+	
+</form>
+
+</body>
+</html>

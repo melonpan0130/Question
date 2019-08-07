@@ -1,0 +1,65 @@
+body {
+    background-image: linear-gradient(#7C07F2 50%, #AB04F2 );
+    background-attachment: fixed;
+    padding-top: 10px;
+}
+
+#content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.board {
+    background-color: #EEEEEE;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px #D6F204;
+}
+
+.user>img {
+    border-radius: 50%;
+    width: 50px;
+    border: solid 3px #D6C4C1;
+}
+
+.board a {
+    color: #332E30;
+    text-decoration: none;
+}
+
+.user {
+    position: relative;
+    color: rgb(136, 136, 136);
+}
+
+.user>span {
+    position: absolute;
+    margin: 10px;
+    top: 0;
+}
+
+.user>span:last-child {
+    right: 0;
+}
+
+.foot {
+    margin-top: 20px;
+}
+
+.foot>span {
+    display: inline-block;
+}
+
+.foot>span>img{
+    width: 20px;
+    height: 20px;
+}
+
+.foot span:last-child{
+    float: right;
+}
+
+.foot>span:first-child {
+    clear: both;
+}
